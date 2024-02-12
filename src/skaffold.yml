@@ -1,0 +1,23 @@
+apiVersion: skaffold/v4beta6
+kind: Config
+metadata:
+  name: data-1500
+manifests:
+  rawYaml:
+  - postgres/postgres.k8s.yml
+build:
+  artifacts:
+  - image: data-1500-postgres
+    context: postgres
+    docker:
+      dockerfile: Dockerfile
+deploy:
+  kubectl: {}
+  statusCheckDeadlineSeconds: 600
+profiles:
+- name: data-1500-dev
+  portForward:
+    - resourceType: service
+      resourceName: postgres
+      port: 5432
+      localPort: 5432
