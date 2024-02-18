@@ -22,7 +22,7 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 SET row_security = off;
 
-DROP DATABASE dvdrental IF EXISTS FORCE;
+DROP DATABASE IF EXISTS dvdrental FORCE;
 
 CREATE DATABASE dvdrental
     WITH TEMPLATE = template0
