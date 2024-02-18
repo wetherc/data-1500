@@ -31,6 +31,7 @@ check_binary () {
 }
 
 query_psql () {
+  PGPASSWORD="password" \
   psql \
     -h "127.0.0.1" \
     -p "5432" \

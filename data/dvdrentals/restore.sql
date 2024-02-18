@@ -22,18 +22,16 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 SET row_security = off;
 
-DROP DATABASE dvdrental;
+DROP DATABASE dvdrental IF EXISTS FORCE;
 
 CREATE DATABASE dvdrental
     WITH TEMPLATE = template0
-    ENCODING = 'UTF8'
-    LC_COLLATE = 'English_United States.1252'
-    LC_CTYPE = 'English_United States.1252';
+    ENCODING = 'UTF8';
 
 
 ALTER DATABASE dvdrental OWNER TO codio;
 
-\connect dvdrental
+\connect dvdrental;
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
