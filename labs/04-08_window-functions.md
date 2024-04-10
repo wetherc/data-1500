@@ -31,7 +31,7 @@ Write a query that returns the popularity of each film genre by:
   - number of rentals; and (separately)
   - number of films in the genre
 
-This should use two different `RANK` functions, one for popularity by number of films, and one for popularity by number of rentals. For both, you should partition by the film category.
+This should use two different `RANK` functions, one for popularity by number of films, and one for popularity by number of rentals. 
 
 ## Exercise 02: `ROW_NUMBER`
 
